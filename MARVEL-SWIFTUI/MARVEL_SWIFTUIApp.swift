@@ -2,7 +2,7 @@
 //  MARVEL_SWIFTUIApp.swift
 //  MARVEL-SWIFTUI
 //
-//  Created by Mohamed Jaber on 01/03/2024.
+//  Created by Hany Karam on 01/03/2024.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct MARVEL_SWIFTUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MoviesView(viewModel: MoviesViewModel(moviesUseCase: MoviesUseCase(moviesRepo: MoviesRepoImpl(session: URLSession.shared, baseURL: "https://gateway.marvel.com"))))
         }
     }
 }
